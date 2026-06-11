@@ -1,376 +1,815 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="description" content="Constructora Emmanuel – Especialistas en obras civiles, demoliciones, excavaciones y acabados arquitectónicos en Lima, Perú."/>
-  <link rel="stylesheet" href="css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="css/owl.carousel.min.css"/>
-  <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
-  <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/style.css"/>
-  <title>Constructora Emmanuel | Obras Civiles – Lima, Perú</title>
-  <link rel="icon" href="./img/icon.ico"/>
-</head>
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
-
-<!-- TOP NAV -->
-<div class="top-nav" id="home">
-  <div class="container">
-    <div class="row justify-content-between align-items-center">
-      <div class="col-auto d-flex flex-wrap gap-2">
-        <a href="mailto:info@constructoraemmanuel.pe" class="top-link"><i class="bx bxs-envelope"></i> info@constructoraemmanuel.pe</a>
-        <a href="tel:+51919441396" class="top-link"><i class="bx bxs-phone-call"></i> (+51) 919 441 396</a>
-      </div>
-      <div class="col-auto social-icons">
-        <a href="#"><i class="bx bxl-facebook"></i></a>
-        <a href="#"><i class="bx bxl-instagram"></i></a>
-        <a href="#"><i class="bx bxl-whatsapp"></i></a>
-        <a href="#"><i class="bx bxl-linkedin"></i></a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
-  <div class="container">
-    <a class="navbar-brand" href="#home"><img src="./img/logo.png" class="logo img-fluid" alt="Constructora Emmanuel"/></a>
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto align-items-lg-center">
-        <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">Nosotros</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
-        <li class="nav-item"><a class="nav-link" href="#portfolio">Proyectos</a></li>
-        <li class="nav-item"><a class="nav-link" href="#team">Equipo</a></li>
-        <li class="nav-item"><a class="nav-link" href="#reviews">Testimonios</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
-        <li class="nav-item ms-lg-2"><a href="src/brochure_Constructora_Emmanuel.pdf" class="btn btn-brand" target="_blank">Brochure</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- HERO SLIDER (v3) -->
-<div class="owl-carousel owl-theme hero-slider">
-  <div class="slide slide1">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-8 text-white">
-          <h6 class="text-white text-uppercase">¡Bienvenidos!</h6>
-          <h1 class="display-3 my-4">Constructora Emmanuel<br>Servicios Generales S.A.C.</h1>
-          <p class="mb-4" style="color:rgba(255,255,255,.75);max-width:480px">Especialistas en obras civiles, demoliciones y excavaciones en Lima, Perú.</p>
-          <a href="#about" class="btn btn-brand me-3">Conócenos</a>
-          <a href="#portfolio" class="btn btn-outline-light">Ver Proyectos</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="slide slide2">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-9 text-white">
-          <h6 class="text-white text-uppercase">Líderes en Obras Civiles</h6>
-          <h1 class="display-3 my-4">Calidad, innovación y compromiso en cada proyecto</h1>
-          <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-brand me-3">Contáctanos</a>
-          <a href="#portfolio" class="btn btn-outline-light">Ver Proyectos</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="slide slide3">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-9 text-white">
-          <h6 class="text-white text-uppercase">Construimos tu Visión</h6>
-          <h1 class="display-3 my-4">Obras seguras, eficientes y a la medida</h1>
-          <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-brand me-3">Contáctanos</a>
-          <a href="#services" class="btn btn-outline-light">Nuestros Servicios</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="slide slide4">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-9 text-white">
-          <h6 class="text-white text-uppercase">Excelencia que Perdura</h6>
-          <h1 class="display-3 my-4">Infraestructura de alto nivel, con garantía</h1>
-          <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-brand me-3">Contáctanos</a>
-          <a href="#portfolio" class="btn btn-outline-light">Ver Proyectos</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="container">
-    <div class="row align-items-center gy-5">
-      <div class="col-lg-6 fade-left">
-        <p class="section-eyebrow">Quiénes Somos</p>
-        <h1 class="mb-4">Nosotros</h1>
-        <div class="row g-4">
-          <div class="col-12"><div class="info-box">
-            <img src="img/icon_nosotros.png" alt="Nosotros" />
-            <div class="ms-4"><h5>Nosotros</h5><p>Somos una empresa de construcción e ingeniería fundada en 2022, especializada en <b>obras previas</b>, <b>demoliciones y excavaciones</b>. Nuestro compromiso con la <b>experiencia, eficiencia y seguridad</b> nos ha permitido ganarnos la confianza de las principales constructoras e inmobiliarias del país.</p></div>
-          </div></div>
-          <div class="col-12"><div class="info-box">
-            <img src="img/icon_mision.png" alt="Misión" />
-            <div class="ms-4"><h5>Misión</h5><p>Brindar servicios de <b>diseño, construcción y mantenimiento</b> de obras civiles, garantizando calidad, cumplimiento y rentabilidad, superando las expectativas de nuestros clientes.</p></div>
-          </div></div>
-          <div class="col-12"><div class="info-box">
-            <img src="img/icon_vision.png" alt="Visión" />
-            <div class="ms-4"><h5>Visión</h5><p>Ser una empresa líder en construcción, reconocida por nuestra calidad de servicio y posicionada entre las mejores del país.</p></div>
-          </div></div>
-          <div class="col-12">
-            <a href="src/brochure_Constructora_Emmanuel.pdf" target="_blank" class="btn btn-brand">Descargar Brochure</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Constructora Emmanuel – Especialistas en obras civiles, demoliciones, excavaciones y acabados arquitectónicos en Lima, Perú."
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Constructora Emmanuel | Obras Civiles – Lima, Perú</title>
+    <link rel="icon" href="./img/icon.ico" />
+  </head>
+  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+    <!-- TOP NAV -->
+    <div class="top-nav" id="home">
+      <div class="container">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-auto d-flex flex-wrap gap-2">
+            <a href="mailto:info@constructoraemmanuel.pe" class="top-link"
+              ><i class="bx bxs-envelope"></i> info@constructoraemmanuel.pe</a
+            >
+            <a href="tel:+51919441396" class="top-link"
+              ><i class="bx bxs-phone-call"></i> (+51) 919 441 396</a
+            >
           </div>
-        </div>
-      </div>
-      <div class="col-lg-6 fade-right">
-        <img src="img/nosotros.png" alt="Equipo Constructora Emmanuel en obra" class="rounded-2" />
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MILESTONE -->
-<section id="milestone">
-  <div class="container">
-    <div class="row text-center justify-content-center gy-4">
-      <div class="col-lg-2 col-6"><h1 class="display-4" data-target="100" data-suffix="+">0+</h1><p class="mb-0">Proyectos Finalizados</p></div>
-      <div class="col-lg-2 col-6"><h1 class="display-4" data-target="10" data-suffix="M+">0M+</h1><p class="mb-0">m² Construidos</p></div>
-      <div class="col-lg-2 col-6"><h1 class="display-4" data-target="99" data-suffix="%">0%</h1><p class="mb-0">Clientes Satisfechos</p></div>
-      <div class="col-lg-2 col-6"><h1 class="display-4" data-target="50" data-suffix="K+">0K+</h1><p class="mb-0">Horas de Ingeniería</p></div>
-      <div class="col-lg-2 col-6"><h1 class="display-4" data-target="5" data-suffix="+">0+</h1><p class="mb-0">Años de Experiencia</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-  <div class="container">
-    <div class="text-center intro fade-up">
-      <p class="section-eyebrow">Nuestros Servicios</p>
-      <h1>¿Qué Hacemos?</h1>
-      <p class="mx-auto">Damos vida a proyectos con innovación y precisión. Desde la planificación hasta los acabados, construimos espacios funcionales, seguros y duraderos.</p>
-    </div>
-    <div class="row g-4 mt-2">
-      <div class="col-lg-4 col-md-6 stagger-item" style="transition-delay:0ms">
-        <div class="service-v2">
-          <img class="svc-img" src="img/project1.png" alt="Asesoría"/>
-          <div class="svc-body">
-            <div class="svc-icon"><img src="img/icon1.png" alt=""/></div>
-            <h5>Asesoría y Consultoría</h5>
-            <p>Brindamos asesoría experta en cada etapa de tu proyecto, garantizando soluciones eficientes y seguras.</p>
-          </div>
-          <div class="svc-bar"></div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 stagger-item" style="transition-delay:80ms">
-        <div class="service-v2">
-          <img class="svc-img" src="img/project2.png" alt="Acabados"/>
-          <div class="svc-body">
-            <div class="svc-icon"><img src="img/icon2.png" alt=""/></div>
-            <h5>Acabados Arquitectónicos</h5>
-            <p>Acabados de alta calidad combinando diseño, precisión y materiales de primera para un resultado impecable.</p>
-          </div>
-          <div class="svc-bar"></div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 stagger-item" style="transition-delay:160ms">
-        <div class="service-v2">
-          <img class="svc-img" src="img/project3.png" alt="Tierra"/>
-          <div class="svc-body">
-            <div class="svc-icon"><img src="img/icon3.png" alt=""/></div>
-            <h5>Movimientos de Tierra y Pavimentación</h5>
-            <p>Maquinaria especializada para movimientos de tierra y pavimentación con precisión y seguridad.</p>
-          </div>
-          <div class="svc-bar"></div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 stagger-item" style="transition-delay:0ms">
-        <div class="service-v2">
-          <img class="svc-img" src="img/project4.png" alt="Obras Civiles"/>
-          <div class="svc-body">
-            <div class="svc-icon"><img src="img/icon4.png" alt=""/></div>
-            <h5>Construcción y Obras Civiles</h5>
-            <p>Infraestructura, ampliaciones, remodelaciones y demoliciones con calidad, seguridad y eficiencia.</p>
-          </div>
-          <div class="svc-bar"></div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 stagger-item" style="transition-delay:80ms">
-        <div class="service-v2">
-          <img class="svc-img" src="img/project5.png" alt="Sanitarias"/>
-          <div class="svc-body">
-            <div class="svc-icon"><img src="img/icon5.png" alt=""/></div>
-            <h5>Redes Sanitarias</h5>
-            <p>Diseño, instalación y mantenimiento de redes sanitarias bajo los más altos estándares de calidad.</p>
-          </div>
-          <div class="svc-bar"></div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 stagger-item" style="transition-delay:160ms">
-        <div class="service-v2">
-          <img class="svc-img" src="img/project6.png" alt="Eléctrica"/>
-          <div class="svc-body">
-            <div class="svc-icon"><img src="img/icon6.png" alt=""/></div>
-            <h5>Sistemas Eléctricos e Instalaciones</h5>
-            <p>Instalación y mantenimiento de sistemas eléctricos con garantía de seguridad y eficiencia.</p>
-          </div>
-          <div class="svc-bar"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PORTFOLIO -->
-<section id="portfolio">
-  <div class="container">
-    <div class="portfolio-header fade-up">
-      <div class="portfolio-header-left">
-        <p class="section-eyebrow">Obras</p>
-        <h1>Proyectos Exitosos</h1>
-        <p>Obras que demuestran nuestra capacidad técnica, seguridad y cumplimiento en plazos críticos.</p>
-      </div>
-      <div class="filter-btns">
-        <button class="filter-btn active" data-filter="all">Todos</button>
-        <button class="filter-btn" data-filter="obras-civiles">Obras Civiles</button>
-        <button class="filter-btn" data-filter="demoliciones">Demoliciones</button>
-        <button class="filter-btn" data-filter="pavimentacion">Pavimentación</button>
-        <button class="filter-btn" data-filter="acabados">Acabados</button>
-      </div>
-    </div>
-    <div id="portfolio-grid" class="proj-grid-wrap"></div>
-    <div class="text-center">
-      <a href="proyectos.html" class="btn btn-outline-dark btn-all-projects">
-        Ver todos los proyectos <i class="bx bx-arrow-back ms-1" style="transform:rotate(180deg)"></i>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- TEAM -->
-<section id="team">
-  <div class="container">
-    <div class="intro text-center fade-up">
-      <p class="section-eyebrow">Nuestro Equipo</p>
-      <h1>Las Personas Detrás de Cada Obra</h1>
-      <p class="mx-auto">Profesionales comprometidos con la calidad, la seguridad y la excelencia en cada proyecto.</p>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-lg-4 col-md-6 mb-4 stagger-item" style="transition-delay:0ms"><div class="team-member"><div class="image"><img src="img/team_1.jpg" alt="Gerente General"/><div class="social-icons"><a href="#"><i class="bx bxl-facebook"></i></a><a href="#"><i class="bx bxl-linkedin"></i></a><a href="#"><i class="bx bxl-instagram"></i></a></div><div class="overlay"></div></div><h5>Ing. [Nombre Apellido]</h5><p>Gerente General</p></div></div>
-      <div class="col-lg-4 col-md-6 mb-4 stagger-item" style="transition-delay:100ms"><div class="team-member"><div class="image"><img src="img/team_2.jpg" alt="Jefe de Operaciones"/><div class="social-icons"><a href="#"><i class="bx bxl-facebook"></i></a><a href="#"><i class="bx bxl-linkedin"></i></a><a href="#"><i class="bx bxl-instagram"></i></a></div><div class="overlay"></div></div><h5>Ing. [Nombre Apellido]</h5><p>Jefe de Operaciones</p></div></div>
-      <div class="col-lg-4 col-md-6 mb-4 stagger-item" style="transition-delay:200ms"><div class="team-member"><div class="image"><img src="img/team_3.jpg" alt="Residente de Obra"/><div class="social-icons"><a href="#"><i class="bx bxl-facebook"></i></a><a href="#"><i class="bx bxl-linkedin"></i></a><a href="#"><i class="bx bxl-instagram"></i></a></div><div class="overlay"></div></div><h5>Ing. [Nombre Apellido]</h5><p>Residente de Obra</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- CLIENTS -->
-<section id="clients">
-  <div class="clients-heading fade-up">
-    <h2>Empresas que confían en nosotros</h2>
-    <span class="badge-exp">Experiencia comprobada</span>
-  </div>
-  <div class="owl-carousel owl-theme clients-slider">
-    <div class="client-logo"><img src="img/menorca.png" alt="menorca"/></div>
-    <div class="client-logo"><img src="img/los portales.png" alt="los portales"/></div>
-    <div class="client-logo"><img src="img/lor portales departamentos.webp" alt="los portales departamentos"/></div>
-    <div class="client-logo"><img src="img/go house.png.avif" alt="go house"/></div>
-    <div class="client-logo"><img src="img/lgp.png" alt="lgp"/></div>
-    <div class="client-logo"><img src="img/marverde.png" alt="marverde"/></div>
-    <div class="client-logo"><img src="img/alegra.png" alt="alegra inmobiliaria"/></div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section id="reviews">
-  <div class="container text-center mb-4 fade-up">
-    <p class="section-eyebrow" style="justify-content:center;color:rgba(255,255,255,.8)">Lo Que Dicen</p>
-    <h1 style="color:#fff">Testimonios de Clientes</h1>
-  </div>
-  <div class="owl-theme owl-carousel reviews-slider container">
-    <div class="review"><div class="person"><img src="img/team_1.jpg" alt="Carlos Romero"/><h5>Carlos Romero</h5><small>Gerente de Proyectos · Inmobiliaria del Sol</small></div><h3>"Trabajamos con Constructora Emmanuel en un proyecto de demolición y excavación. El equipo demostró profesionalismo, puntualidad y un manejo impecable de la seguridad en obra. Altamente recomendados."</h3><div class="stars"><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i></div><i class="bx bxs-quote-alt-left"></i></div>
-    <div class="review"><div class="person"><img src="img/team_2.jpg" alt="María Vargas"/><h5>María Vargas</h5><small>Directora Técnica · Grupo Construye Perú</small></div><h3>"Los acabados arquitectónicos que realizaron superaron todas nuestras expectativas. Cumplieron plazos y presupuestos sin comprometer la calidad. Sin duda los volvemos a contratar."</h3><div class="stars"><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i></div><i class="bx bxs-quote-alt-left"></i></div>
-    <div class="review"><div class="person"><img src="img/team_3.jpg" alt="Andrés López"/><h5>Andrés López</h5><small>Gerente General · Edificaciones Norte S.A.C.</small></div><h3>"Excelente coordinación y comunicación constante durante toda la ejecución. El trabajo de movimiento de tierras y pavimentación fue de primer nivel. Los recomiendo al 100%."</h3><div class="stars"><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i></div><i class="bx bxs-quote-alt-left"></i></div>
-  </div>
-</section>
-
-<!-- CONTACT CTA -->
-<section id="contact" class="contact-cta">
-  <div class="container">
-    <div class="row justify-content-center text-center">
-      <div class="col-lg-7 fade-up">
-        <p class="section-eyebrow" style="justify-content:center;color:rgba(255,255,255,.85)">¿Tienes un Proyecto?</p>
-        <h1 class="mb-3">Cuéntanos tu idea y<br>lo hacemos realidad</h1>
-        <p class="mb-4" style="opacity:.88">Escríbenos y nuestro equipo se pondrá en contacto contigo a la brevedad.</p>
-        <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
-          <a href="mailto:info@constructoraemmanuel.pe" class="contact-link"><i class="bx bxs-envelope me-2"></i>info@constructoraemmanuel.pe</a>
-          <a href="tel:+51919441396" class="contact-link"><i class="bx bxs-phone-call me-2"></i>(+51) 919 441 396</a>
-        </div>
-        <a href="#" class="btn btn-dark btn-lg px-5" data-bs-toggle="modal" data-bs-target="#exampleModal">Enviar Mensaje</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-top text-center">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-6">
-          <a class="navbar-brand d-inline-block mb-3" href="#home"><img src="./img/logo.png" class="logo img-fluid" alt="Constructora Emmanuel"/></a>
-          <p>Empresa constructora comprometida con la calidad, innovación y seguridad. Proyectos eficientes y duraderos a medida del cliente.</p>
-          <div class="social-icons mt-3 d-flex justify-content-center gap-2">
+          <div class="col-auto social-icons">
             <a href="#"><i class="bx bxl-facebook"></i></a>
             <a href="#"><i class="bx bxl-instagram"></i></a>
             <a href="#"><i class="bx bxl-whatsapp"></i></a>
             <a href="#"><i class="bx bxl-linkedin"></i></a>
           </div>
-          <div class="footer-links mt-4 d-flex flex-wrap justify-content-center gap-3">
-            <a href="#about">Nosotros</a>
-            <a href="#services">Servicios</a>
-            <a href="proyectos.html">Proyectos</a>
-            <a href="#team">Equipo</a>
-            <a href="#reviews">Testimonios</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#home"
+          ><img
+            src="./img/logo.png"
+            class="logo img-fluid"
+            alt="Constructora Emmanuel"
+        /></a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Proyectos</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#team">Equipo</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#reviews">Testimonios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contacto</a>
+            </li>
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-brand">Contáctanos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SLIDER (v3) -->
+    <div class="owl-carousel owl-theme hero-slider">
+      <div class="slide slide1">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-8 text-white">
+              <h6 class="text-white text-uppercase">
+                CONSTRUCTORA EMMANUEL SERVICIOS GENERALES S.A.C.
+              </h6>
+              <h1 class="display-3 my-4">
+                Ejecutamos obras civiles e infraestructura para cada proyecto
+              </h1>
+              <p
+                class="mb-4"
+                style="color: rgba(255, 255, 255, 0.75); max-width: 480px"
+              >
+                Realizamos pistas y veredas, movimiento de tierras, redes
+                sanitarias, instalaciones eléctricas, excavaciones y acabados
+                arquitectónicos.
+              </p>
+              <a href="#about" class="btn btn-brand me-3"
+                >Solicitar cotización
+              </a>
+              <a href="#portfolio" class="btn btn-outline-light"
+                >Ver Proyectos</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide slide2">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-9 text-white">
+              <h6 class="text-white text-uppercase">
+                PISTAS, VEREDAS Y PAVIMENTACIÓN
+              </h6>
+              <h1 class="display-3 my-4">
+                Construimos vías seguras, resistentes y duraderas
+              </h1>
+              <p
+                class="mb-4"
+                style="color: rgba(255, 255, 255, 0.75); max-width: 480px"
+              >
+                Ejecutamos pavimentación, construcción de veredas, sardineles y
+                acondicionamiento vial para proyectos públicos y privados.
+              </p>
+              <a
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                class="btn btn-brand me-3"
+                >Solicitar cotización
+              </a>
+              <a href="#portfolio" class="btn btn-outline-light"
+                >Ver Proyectos</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide slide3">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-9 text-white">
+              <h6 class="text-white text-uppercase">REDES SANITARIAS</h6>
+              <h1 class="display-3 my-4">
+                Instalamos redes sanitarias eficientes y confiables
+              </h1>
+              <p
+                class="mb-4"
+                style="color: rgba(255, 255, 255, 0.75); max-width: 480px"
+              >
+                Ejecutamos redes de agua potable, alcantarillado y drenaje,
+                desde la preparación del terreno hasta la instalación y las
+                pruebas finales.
+              </p>
+              <a
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                class="btn btn-brand me-3"
+                >Solicitar cotización
+              </a>
+              <a href="#services" class="btn btn-outline-light"
+                >Nuestros Servicios</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide slide4">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-9 text-white">
+              <h6 class="text-white text-uppercase">
+                OBRAS E INGENIERÍA CIVIL
+              </h6>
+              <h1 class="display-3 my-4">
+                Soluciones técnicas para construir proyectos sólidos
+              </h1>
+              <p
+                class="mb-4"
+                style="color: rgba(255, 255, 255, 0.75); max-width: 480px"
+              >
+                Ejecutamos obras civiles, estructuras de concreto, ampliaciones
+                y remodelaciones, adaptándonos a los requerimientos técnicos de
+                cada proyecto.
+              </p>
+              <a
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                class="btn btn-brand me-3"
+                >Solicitar cotización
+              </a>
+              <a href="#portfolio" class="btn btn-outline-light"
+                >Ver Proyectos</a
+              >
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="footer-bottom text-center">
-    <p class="mb-0">Copyright © Constructora Emmanuel Servicios Generales S.A.C. – Todos los derechos reservados · 2026</p>
-  </div>
-</footer>
 
-<!-- MODAL CONTACTO -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-xl">
-    <div class="modal-content">
-      <div class="modal-body p-0">
-        <button type="button" class="btn-close modal-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-4 bg-cover d-none d-lg-block" style="background-image:url(img/c2.png);min-height:420px"></div>
-            <div class="col-lg-8">
-              <div class="p-4 p-lg-5">
-                <h2>¿Tienes un proyecto en mente?</h2>
-                <p>Escríbenos y nuestro equipo se pondrá en contacto contigo lo antes posible.</p>
-                <div class="row g-3 mt-1">
-                  <div class="col-sm-6"><label class="form-label fw-semibold small">Nombres</label><input type="text" class="form-control" placeholder="Tu nombre"/></div>
-                  <div class="col-sm-6"><label class="form-label fw-semibold small">Apellidos</label><input type="text" class="form-control" placeholder="Tus apellidos"/></div>
-                  <div class="col-12"><label class="form-label fw-semibold small">Correo</label><input type="email" class="form-control" placeholder="mail@email.com"/></div>
-                  <div class="col-12"><label class="form-label fw-semibold small">Teléfono</label><input type="tel" class="form-control" placeholder="+51 999 999 999"/></div>
-                  <div class="col-12"><label class="form-label fw-semibold small">Mensaje</label><textarea class="form-control" rows="4" placeholder="Cuéntanos sobre tu proyecto..."></textarea></div>
-                  <div class="col-12"><button class="btn btn-brand w-100 py-2">Enviar mensaje</button></div>
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-6 fade-left">
+            <p class="section-eyebrow">CONOCE NUESTRA EMPRESA</p>
+            <h1 class="mb-4">Experiencia técnica al servicio de cada obra</h1>
+            <div class="row g-4">
+              <div class="col-12">
+                <div class="info-box">
+                  <img src="img/icon_nosotros.png" alt="Nosotros" />
+                  <div class="ms-4">
+                    <h5>Construimos soluciones confiables</h5>
+                    <p>
+                      Constructora Emmanuel Servicios Generales S.A.C. es una
+                      empresa peruana dedicada a la ejecución de obras civiles e
+                      infraestructura. Desarrollamos proyectos de pistas y
+                      veredas, movimiento de tierras, redes sanitarias,
+                      instalaciones eléctricas y acabados arquitectónicos para
+                      clientes públicos y privados.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="info-box">
+                  <img src="img/icon_mision.png" alt="Misión" />
+                  <div class="ms-4">
+                    <h5>Nuestro enfoque</h5>
+                    <p>
+                      Planificamos y ejecutamos cada trabajo de acuerdo con sus
+                      requerimientos técnicos, priorizando la seguridad, el uso
+                      eficiente de los recursos y el cumplimiento de los plazos
+                      establecidos.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="info-box">
+                  <img src="img/icon_vision.png" alt="Visión" />
+                  <div class="ms-4">
+                    <h5>Nuestro compromiso</h5>
+                    <p>
+                      Buscamos construir relaciones duraderas con nuestros
+                      clientes mediante una comunicación cercana, atención
+                      responsable y resultados que respondan a las necesidades
+                      reales de cada proyecto.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <a
+                  href="src/brochure_Constructora_Emmanuel.pdf"
+                  target="_blank"
+                  class="btn btn-brand"
+                  >Conocer nuestra experiencia
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 fade-right">
+            <img
+              src="img/nosotros.png"
+              alt="Equipo Constructora Emmanuel en obra"
+              class="rounded-2"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MILESTONE -->
+    <section id="milestone">
+      <div class="container">
+        <div class="row text-center justify-content-center gy-4">
+          <div class="col-lg-2 col-6">
+            <h1 class="display-4" data-target="100" data-suffix="+">0+</h1>
+            <p class="mb-0">Proyectos Finalizados</p>
+          </div>
+          <div class="col-lg-2 col-6">
+            <h1 class="display-4" data-target="10" data-suffix="M+">0M+</h1>
+            <p class="mb-0">m² Construidos</p>
+          </div>
+          <div class="col-lg-2 col-6">
+            <h1 class="display-4" data-target="99" data-suffix="%">0%</h1>
+            <p class="mb-0">Clientes Satisfechos</p>
+          </div>
+          <div class="col-lg-2 col-6">
+            <h1 class="display-4" data-target="50" data-suffix="K+">0K+</h1>
+            <p class="mb-0">Horas de Ingeniería</p>
+          </div>
+          <div class="col-lg-2 col-6">
+            <h1 class="display-4" data-target="5" data-suffix="+">0+</h1>
+            <p class="mb-0">Años de Experiencia</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <div class="text-center intro fade-up">
+          <p class="section-eyebrow">Nuestros Servicios</p>
+          <h1>¿Qué Hacemos?</h1>
+          <p class="mx-auto">
+            Damos vida a proyectos con innovación y precisión. Desde la
+            planificación hasta los acabados, construimos espacios funcionales,
+            seguros y duraderos.
+          </p>
+        </div>
+        <div class="row g-4 mt-2">
+          <div
+            class="col-lg-4 col-md-6 stagger-item"
+            style="transition-delay: 0ms"
+          >
+            <div class="service-v2">
+              <img class="svc-img" src="img/project1.png" alt="Asesoría" />
+              <div class="svc-body">
+                <div class="svc-icon"><img src="img/icon1.png" alt="" /></div>
+                <h5>Asesoría y Consultoría</h5>
+                <p>
+                  Brindamos asesoría experta en cada etapa de tu proyecto,
+                  garantizando soluciones eficientes y seguras.
+                </p>
+              </div>
+              <div class="svc-bar"></div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 stagger-item"
+            style="transition-delay: 80ms"
+          >
+            <div class="service-v2">
+              <img class="svc-img" src="img/project2.png" alt="Acabados" />
+              <div class="svc-body">
+                <div class="svc-icon"><img src="img/icon2.png" alt="" /></div>
+                <h5>Acabados Arquitectónicos</h5>
+                <p>
+                  Acabados de alta calidad combinando diseño, precisión y
+                  materiales de primera para un resultado impecable.
+                </p>
+              </div>
+              <div class="svc-bar"></div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 stagger-item"
+            style="transition-delay: 160ms"
+          >
+            <div class="service-v2">
+              <img class="svc-img" src="img/project3.png" alt="Tierra" />
+              <div class="svc-body">
+                <div class="svc-icon"><img src="img/icon3.png" alt="" /></div>
+                <h5>Movimientos de Tierra y Pavimentación</h5>
+                <p>
+                  Maquinaria especializada para movimientos de tierra y
+                  pavimentación con precisión y seguridad.
+                </p>
+              </div>
+              <div class="svc-bar"></div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 stagger-item"
+            style="transition-delay: 0ms"
+          >
+            <div class="service-v2">
+              <img class="svc-img" src="img/project4.png" alt="Obras Civiles" />
+              <div class="svc-body">
+                <div class="svc-icon"><img src="img/icon4.png" alt="" /></div>
+                <h5>Construcción y Obras Civiles</h5>
+                <p>
+                  Infraestructura, ampliaciones, remodelaciones y demoliciones
+                  con calidad, seguridad y eficiencia.
+                </p>
+              </div>
+              <div class="svc-bar"></div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 stagger-item"
+            style="transition-delay: 80ms"
+          >
+            <div class="service-v2">
+              <img class="svc-img" src="img/project5.png" alt="Sanitarias" />
+              <div class="svc-body">
+                <div class="svc-icon"><img src="img/icon5.png" alt="" /></div>
+                <h5>Redes Sanitarias</h5>
+                <p>
+                  Diseño, instalación y mantenimiento de redes sanitarias bajo
+                  los más altos estándares de calidad.
+                </p>
+              </div>
+              <div class="svc-bar"></div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 stagger-item"
+            style="transition-delay: 160ms"
+          >
+            <div class="service-v2">
+              <img class="svc-img" src="img/project6.png" alt="Eléctrica" />
+              <div class="svc-body">
+                <div class="svc-icon"><img src="img/icon6.png" alt="" /></div>
+                <h5>Sistemas Eléctricos e Instalaciones</h5>
+                <p>
+                  Instalación y mantenimiento de sistemas eléctricos con
+                  garantía de seguridad y eficiencia.
+                </p>
+              </div>
+              <div class="svc-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="portfolio-header fade-up">
+          <div class="portfolio-header-left">
+            <p class="section-eyebrow">Obras</p>
+            <h1>Proyectos Exitosos</h1>
+            <p>
+              Obras que demuestran nuestra capacidad técnica, seguridad y
+              cumplimiento en plazos críticos.
+            </p>
+          </div>
+          <div class="filter-btns">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="obras-civiles">
+              Obras Civiles
+            </button>
+            <button class="filter-btn" data-filter="demoliciones">
+              Demoliciones
+            </button>
+            <button class="filter-btn" data-filter="pavimentacion">
+              Pavimentación
+            </button>
+            <button class="filter-btn" data-filter="acabados">Acabados</button>
+          </div>
+        </div>
+        <div id="portfolio-grid" class="proj-grid-wrap"></div>
+        <div class="text-center">
+          <a
+            href="proyectos.html"
+            class="btn btn-outline-dark btn-all-projects"
+          >
+            Ver todos los proyectos
+            <i
+              class="bx bx-arrow-back ms-1"
+              style="transform: rotate(180deg)"
+            ></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <!-- <section id="team">
+      <div class="container">
+        <div class="intro text-center fade-up">
+          <p class="section-eyebrow">Nuestro Equipo</p>
+          <h1>Las Personas Detrás de Cada Obra</h1>
+          <p class="mx-auto">
+            Profesionales comprometidos con la calidad, la seguridad y la
+            excelencia en cada proyecto.
+          </p>
+        </div>
+        <div class="row justify-content-center">
+          <div
+            class="col-lg-4 col-md-6 mb-4 stagger-item"
+            style="transition-delay: 0ms"
+          >
+            <div class="team-member">
+              <div class="image">
+                <img src="img/team_1.jpg" alt="Gerente General" />
+                <div class="social-icons">
+                  <a href="#"><i class="bx bxl-facebook"></i></a
+                  ><a href="#"><i class="bx bxl-linkedin"></i></a
+                  ><a href="#"><i class="bx bxl-instagram"></i></a>
+                </div>
+                <div class="overlay"></div>
+              </div>
+              <h5>Ing. [Nombre Apellido]</h5>
+              <p>Gerente General</p>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 mb-4 stagger-item"
+            style="transition-delay: 100ms"
+          >
+            <div class="team-member">
+              <div class="image">
+                <img src="img/team_2.jpg" alt="Jefe de Operaciones" />
+                <div class="social-icons">
+                  <a href="#"><i class="bx bxl-facebook"></i></a
+                  ><a href="#"><i class="bx bxl-linkedin"></i></a
+                  ><a href="#"><i class="bx bxl-instagram"></i></a>
+                </div>
+                <div class="overlay"></div>
+              </div>
+              <h5>Ing. [Nombre Apellido]</h5>
+              <p>Jefe de Operaciones</p>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 mb-4 stagger-item"
+            style="transition-delay: 200ms"
+          >
+            <div class="team-member">
+              <div class="image">
+                <img src="img/team_3.jpg" alt="Residente de Obra" />
+                <div class="social-icons">
+                  <a href="#"><i class="bx bxl-facebook"></i></a
+                  ><a href="#"><i class="bx bxl-linkedin"></i></a
+                  ><a href="#"><i class="bx bxl-instagram"></i></a>
+                </div>
+                <div class="overlay"></div>
+              </div>
+              <h5>Ing. [Nombre Apellido]</h5>
+              <p>Residente de Obra</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- CLIENTS -->
+    <section id="clients">
+      <div class="clients-heading fade-up">
+        <h2>Empresas que confían en nosotros</h2>
+        <span class="badge-exp">Experiencia comprobada</span>
+      </div>
+      <div class="owl-carousel owl-theme clients-slider">
+        <div class="client-logo">
+          <img src="img/menorca.png" alt="menorca" />
+        </div>
+        <div class="client-logo">
+          <img src="img/los portales.png" alt="los portales" />
+        </div>
+        <div class="client-logo">
+          <img
+            src="img/lor portales departamentos.webp"
+            alt="los portales departamentos"
+          />
+        </div>
+        <div class="client-logo">
+          <img src="img/go house.png.avif" alt="go house" />
+        </div>
+        <div class="client-logo"><img src="img/lgp.png" alt="lgp" /></div>
+        <div class="client-logo">
+          <img src="img/marverde.png" alt="marverde" />
+        </div>
+        <div class="client-logo">
+          <img src="img/alegra.png" alt="alegra inmobiliaria" />
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <!-- <section id="reviews">
+      <div class="container text-center mb-4 fade-up">
+        <p
+          class="section-eyebrow"
+          style="justify-content: center; color: rgba(255, 255, 255, 0.8)"
+        >
+          Lo Que Dicen
+        </p>
+        <h1 style="color: #fff">Testimonios de Clientes</h1>
+      </div>
+      <div class="owl-theme owl-carousel reviews-slider container">
+        <div class="review">
+          <div class="person">
+            <img src="img/team_1.jpg" alt="Carlos Romero" />
+            <h5>Carlos Romero</h5>
+            <small>Gerente de Proyectos · Inmobiliaria del Sol</small>
+          </div>
+          <h3>
+            "Trabajamos con Constructora Emmanuel en un proyecto de demolición y
+            excavación. El equipo demostró profesionalismo, puntualidad y un
+            manejo impecable de la seguridad en obra. Altamente recomendados."
+          </h3>
+          <div class="stars">
+            <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+            ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+            ><i class="bx bxs-star"></i>
+          </div>
+          <i class="bx bxs-quote-alt-left"></i>
+        </div>
+        <div class="review">
+          <div class="person">
+            <img src="img/team_2.jpg" alt="María Vargas" />
+            <h5>María Vargas</h5>
+            <small>Directora Técnica · Grupo Construye Perú</small>
+          </div>
+          <h3>
+            "Los acabados arquitectónicos que realizaron superaron todas
+            nuestras expectativas. Cumplieron plazos y presupuestos sin
+            comprometer la calidad. Sin duda los volvemos a contratar."
+          </h3>
+          <div class="stars">
+            <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+            ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+            ><i class="bx bxs-star"></i>
+          </div>
+          <i class="bx bxs-quote-alt-left"></i>
+        </div>
+        <div class="review">
+          <div class="person">
+            <img src="img/team_3.jpg" alt="Andrés López" />
+            <h5>Andrés López</h5>
+            <small>Gerente General · Edificaciones Norte S.A.C.</small>
+          </div>
+          <h3>
+            "Excelente coordinación y comunicación constante durante toda la
+            ejecución. El trabajo de movimiento de tierras y pavimentación fue
+            de primer nivel. Los recomiendo al 100%."
+          </h3>
+          <div class="stars">
+            <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+            ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+            ><i class="bx bxs-star"></i>
+          </div>
+          <i class="bx bxs-quote-alt-left"></i>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- CONTACT CTA -->
+    <section id="contact" class="contact-cta">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-7 fade-up">
+            <p
+              class="section-eyebrow"
+              style="justify-content: center; color: rgba(255, 255, 255, 0.85)"
+            >
+              ¿Tienes un Proyecto?
+            </p>
+            <h1 class="mb-3">Cuéntanos tu idea y<br />lo hacemos realidad</h1>
+            <p class="mb-4" style="opacity: 0.88">
+              Escríbenos y nuestro equipo se pondrá en contacto contigo a la
+              brevedad.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+              <a href="mailto:info@constructoraemmanuel.pe" class="contact-link"
+                ><i class="bx bxs-envelope me-2"></i
+                >info@constructoraemmanuel.pe</a
+              >
+              <a href="tel:+51919441396" class="contact-link"
+                ><i class="bx bxs-phone-call me-2"></i>(+51) 919 441 396</a
+              >
+            </div>
+            <a
+              href="#"
+              class="btn btn-dark btn-lg px-5"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              >Enviar Mensaje</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-top text-center">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-6">
+              <a class="navbar-brand d-inline-block mb-3" href="#home"
+                ><img
+                  src="./img/logo.png"
+                  class="logo img-fluid"
+                  alt="Constructora Emmanuel"
+              /></a>
+              <p>
+                Empresa constructora comprometida con la calidad, innovación y
+                seguridad. Proyectos eficientes y duraderos a medida del
+                cliente.
+              </p>
+              <div
+                class="social-icons mt-3 d-flex justify-content-center gap-2"
+              >
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+                <a href="#"><i class="bx bxl-whatsapp"></i></a>
+                <a href="#"><i class="bx bxl-linkedin"></i></a>
+              </div>
+              <div
+                class="footer-links mt-4 d-flex flex-wrap justify-content-center gap-3"
+              >
+                <a href="#about">Nosotros</a>
+                <a href="#services">Servicios</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="#team">Equipo</a>
+                <a href="#reviews">Testimonios</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <p class="mb-0">
+          Copyright © Constructora Emmanuel Servicios Generales S.A.C. – Todos
+          los derechos reservados · 2026
+        </p>
+      </div>
+    </footer>
+
+    <!-- MODAL CONTACTO -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <button
+              type="button"
+              class="btn-close modal-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+            <div class="container-fluid">
+              <div class="row">
+                <div
+                  class="col-lg-4 bg-cover d-none d-lg-block"
+                  style="background-image: url(img/c2.png); min-height: 420px"
+                ></div>
+                <div class="col-lg-8">
+                  <div class="p-4 p-lg-5">
+                    <h2>¿Tienes un proyecto en mente?</h2>
+                    <p>
+                      Escríbenos y nuestro equipo se pondrá en contacto contigo
+                      lo antes posible.
+                    </p>
+                    <div class="row g-3 mt-1">
+                      <div class="col-sm-6">
+                        <label class="form-label fw-semibold small"
+                          >Nombres</label
+                        ><input
+                          type="text"
+                          class="form-control"
+                          placeholder="Tu nombre"
+                        />
+                      </div>
+                      <div class="col-sm-6">
+                        <label class="form-label fw-semibold small"
+                          >Apellidos</label
+                        ><input
+                          type="text"
+                          class="form-control"
+                          placeholder="Tus apellidos"
+                        />
+                      </div>
+                      <div class="col-12">
+                        <label class="form-label fw-semibold small"
+                          >Correo</label
+                        ><input
+                          type="email"
+                          class="form-control"
+                          placeholder="mail@email.com"
+                        />
+                      </div>
+                      <div class="col-12">
+                        <label class="form-label fw-semibold small"
+                          >Teléfono</label
+                        ><input
+                          type="tel"
+                          class="form-control"
+                          placeholder="+51 999 999 999"
+                        />
+                      </div>
+                      <div class="col-12">
+                        <label class="form-label fw-semibold small"
+                          >Mensaje</label
+                        ><textarea
+                          class="form-control"
+                          rows="4"
+                          placeholder="Cuéntanos sobre tu proyecto..."
+                        ></textarea>
+                      </div>
+                      <div class="col-12">
+                        <button class="btn btn-brand w-100 py-2">
+                          Enviar mensaje
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -378,59 +817,70 @@
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- MODAL PROYECTO (centrado) -->
-<div id="projectModal" style="display:none;position:fixed;inset:0;z-index:3000;align-items:center;justify-content:center;">
-  <div class="pm-backdrop"></div>
-  <div class="pm-box">
-    <div class="pm-header">
-      <div class="pm-meta-tag"><span id="pm-tag"></span> · <span id="pm-area"></span></div>
-      <h2 id="pm-title"></h2>
-      <button id="pm-close">&#x2715;</button>
-    </div>
-    <div class="pm-body">
-      <div class="pm-img-col"><div id="pm-img"></div></div>
-      <div class="pm-info-col">
-        <p class="pm-desc" id="pm-desc"></p>
-        <div class="pm-grid">
-          <div class="pm-field"><label>Cliente</label><span id="pm-client"></span></div>
-          <div class="pm-field"><label>Ubicación</label><span id="pm-loc"></span></div>
-          <div class="pm-field"><label>Año</label><span id="pm-year"></span></div>
-          <div class="pm-field"><label>Área</label><span id="pm-areav"></span></div>
-          <div class="pm-field"><label>Duración</label><span id="pm-duration"></span></div>
+    <!-- MODAL PROYECTO (centrado) -->
+    <div
+      id="projectModal"
+      style="
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 3000;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <div class="pm-backdrop"></div>
+      <div class="pm-box">
+        <div class="pm-header">
+          <div class="pm-meta-tag">
+            <span id="pm-tag"></span> · <span id="pm-area"></span>
+          </div>
+          <h2 id="pm-title"></h2>
+          <button id="pm-close">&#x2715;</button>
         </div>
-        <a href="#" class="pm-btn" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="$('#projectModal').fadeOut();">Ver proyecto similar</a>
+        <div class="pm-body">
+          <div class="pm-img-col"><div id="pm-carousel-wrap"></div></div>
+          <div class="pm-info-col">
+            <p class="pm-desc" id="pm-desc"></p>
+            <div class="pm-grid">
+              <div class="pm-field">
+                <label>Cliente</label><span id="pm-client"></span>
+              </div>
+              <div class="pm-field">
+                <label>Ubicación</label><span id="pm-loc"></span>
+              </div>
+              <div class="pm-field">
+                <label>Año</label><span id="pm-year"></span>
+              </div>
+              <div class="pm-field">
+                <label>Área</label><span id="pm-areav"></span>
+              </div>
+              <div class="pm-field">
+                <label>Duración</label><span id="pm-duration"></span>
+              </div>
+            </div>
+            <a
+              href="#"
+              class="pm-btn"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              onclick="$('#projectModal').fadeOut()"
+              >Ver proyecto similar</a
+            >
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- WhatsApp -->
-<a href="https://wa.me/51919441396" target="_blank" class="whatsapp-float"><i class="bx bxl-whatsapp"></i></a>
+    <!-- WhatsApp -->
+    <a href="https://wa.me/51919441396" target="_blank" class="whatsapp-float"
+      ><i class="bx bxl-whatsapp"></i
+    ></a>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/app.js"></script>
-<script>
-  // Abrir modal centrado con flexbox
-  $('#projectModal').css('display','none');
-  $(document).on('click','#projectModal .pm-backdrop, #pm-close', function(){
-    $('#projectModal').fadeOut(180);
-    $('body').css('overflow','');
-  });
-  window.openProjectModal = function(id) {
-    var p = window.projects.find(function(x){return x.id===id;});
-    if(!p) return;
-    $('#pm-tag').text(p.tag); $('#pm-area').text(p.area); $('#pm-title').text(p.title);
-    $('#pm-desc').text(p.desc); $('#pm-img').css('background-image','url('+p.img+')');
-    $('#pm-client').text(p.client); $('#pm-loc').text(p.loc); $('#pm-year').text(p.year);
-    $('#pm-areav').text(p.area); $('#pm-duration').text(p.duration);
-    $('#projectModal').css('display','flex');
-    $('body').css('overflow','hidden');
-  };
-</script>
-</body>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>

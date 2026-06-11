@@ -80,11 +80,11 @@ $(document).ready(function () {
 
   /* ── PROJECTS DATA ── */
   window.projects = [
-    { id:1, cat:'obras-civiles',  title:'Centro Logístico Lurín',        tag:'Obras Civiles', area:'12,500 m²', loc:'Lurín, Lima',      img:'img/centrologistico.jpg', client:'Ransa',            year:'2024', duration:'8 meses',  desc:'Construcción integral de nave logística con losa industrial de alta resistencia, sistemas contraincendios y oficinas administrativas. Ejecución con tolerancias milimétricas y entrega anticipada.' },
-    { id:2, cat:'demoliciones',   title:'Demolición Edificio San Isidro', tag:'Demoliciones',  area:'8,000 m²',  loc:'San Isidro, Lima', img:'img/demolicion.jpg', client:'Pacífico Seguros', year:'2024', duration:'4 meses',  desc:'Demolición controlada de edificio de 8 pisos en zona urbana de alta densidad. Gestión de residuos certificada y cero incidentes de seguridad durante toda la ejecución.' },
-    { id:3, cat:'pavimentacion',  title:'Pavimentación Av. Industrial',   tag:'Pavimentación', area:'3.2 km',    loc:'Lima Norte',       img:'img/pavimentacion.jpg', client:'Municipalidad',    year:'2023', duration:'6 meses',  desc:'Pavimentación de avenida industrial de 3.2 km con asfalto de alta resistencia, señalización horizontal y drenaje pluvial. Obra ejecutada sin corte de tráfico.' },
-    { id:4, cat:'acabados',       title:'Residencial Los Olivos',         tag:'Acabados',      area:'120 dptos', loc:'Los Olivos',       img:'img/residencial.jpg', client:'Grupo Inmobil',    year:'2023', duration:'10 meses', desc:'Acabados arquitectónicos completos para 120 departamentos: pisos, pintura, carpintería metálica y vidriería. Entrega a tiempo con índice de satisfacción del 98%.' },
-    { id:5, cat:'obras-civiles',  title:'Planta Industrial Callao',       tag:'Obras Civiles', area:'15,000 m²', loc:'Callao',           img:'img/planta.jpg', client:'Gloria S.A.',      year:'2023', duration:'12 meses', desc:'Construcción de planta industrial con cimentaciones especiales, estructura metálica, losa de alta resistencia y sistemas MEP completos.' },
+    { id:1, cat:'obras-civiles',  title:'Centro Logístico Lurín',        tag:'Obras Civiles', area:'12,500 m²', loc:'Lurín, Lima',      imgs:['img/centrologistico.jpg','img/banner1.jpg','img/banner2.webp','img/banner3.jpg','img/banner4.jpg'], client:'Ransa',            year:'2024', duration:'8 meses',  desc:'Construcción integral de nave logística con losa industrial de alta resistencia, sistemas contraincendios y oficinas administrativas. Ejecución con tolerancias milimétricas y entrega anticipada.' },
+    { id:2, cat:'demoliciones',   title:'Demolición Edificio San Isidro', tag:'Demoliciones',  area:'8,000 m²',  loc:'San Isidro, Lima', imgs:['img/demolicion.jpg','img/banner2.webp','img/banner3.jpg','img/banner4.jpg','img/banner1.jpg'], client:'Pacífico Seguros', year:'2024', duration:'4 meses',  desc:'Demolición controlada de edificio de 8 pisos en zona urbana de alta densidad. Gestión de residuos certificada y cero incidentes de seguridad durante toda la ejecución.' },
+    { id:3, cat:'pavimentacion',  title:'Pavimentación Av. Industrial',   tag:'Pavimentación', area:'3.2 km',    loc:'Lima Norte',       imgs:['img/pavimentacion.jpg','img/banner3.jpg','img/banner4.jpg','img/banner1.jpg','img/banner2.webp'], client:'Municipalidad',    year:'2023', duration:'6 meses',  desc:'Pavimentación de avenida industrial de 3.2 km con asfalto de alta resistencia, señalización horizontal y drenaje pluvial. Obra ejecutada sin corte de tráfico.' },
+    { id:4, cat:'acabados',       title:'Residencial Los Olivos',         tag:'Acabados',      area:'120 dptos', loc:'Los Olivos',       imgs:['img/residencial.jpg','img/banner4.jpg','img/banner1.jpg','img/banner2.webp','img/banner3.jpg'], client:'Grupo Inmobil',    year:'2023', duration:'10 meses', desc:'Acabados arquitectónicos completos para 120 departamentos: pisos, pintura, carpintería metálica y vidriería. Entrega a tiempo con índice de satisfacción del 98%.' },
+    { id:5, cat:'obras-civiles',  title:'Planta Industrial Callao',       tag:'Obras Civiles', area:'15,000 m²', loc:'Callao',           imgs:['img/planta.jpg','img/banner1.jpg','img/banner2.webp','img/banner3.jpg','img/banner4.jpg'], client:'Gloria S.A.',      year:'2023', duration:'12 meses', desc:'Construcción de planta industrial con cimentaciones especiales, estructura metálica, losa de alta resistencia y sistemas MEP completos.' },
   ];
 
   /* ── OPEN PROJECT MODAL ── */
@@ -95,14 +95,32 @@ $(document).ready(function () {
     $('#pm-area').text(p.area);
     $('#pm-title').text(p.title);
     $('#pm-desc').text(p.desc);
-    $('#pm-img').css('background-image', 'url('+p.img+')');
     $('#pm-client').text(p.client);
     $('#pm-loc').text(p.loc);
     $('#pm-year').text(p.year);
     $('#pm-areav').text(p.area);
     $('#pm-duration').text(p.duration);
+
+    let html = '<div class="pm-slides">';
+    p.imgs.forEach((src, i) => {
+      html += '<div class="pm-slide'+(i===0?' active':'')+'" style="background-image:url('+src+')"></div>';
+    });
+    html += '</div>';
+    if (p.imgs.length > 1) {
+      html += '<button class="pm-carousel-btn pm-prev">&#8592;</button>';
+      html += '<button class="pm-carousel-btn pm-next">&#8594;</button>';
+      html += '<div class="pm-dots">';
+      p.imgs.forEach((_, i) => {
+        html += '<button class="pm-dot'+(i===0?' active':'')+'" data-idx="'+i+'"></button>';
+      });
+      html += '</div>';
+      html += '<div class="pm-counter"><span class="pm-cur">1</span> / '+p.imgs.length+'</div>';
+    }
+    $('#pm-carousel-wrap').html(html);
+
     $('#projectModal').css({'display':'flex','opacity':0}).animate({'opacity':1},200);
     $('body').css('overflow','hidden');
+    pmStartAutoplay();
   };
 
   /* ── RENDER PROJECT GRID ── */
@@ -111,7 +129,7 @@ $(document).ready(function () {
     grid.html('');
     const filtered = filter === 'all' ? window.projects : window.projects.filter(p => p.cat === filter);
     filtered.forEach((p, i) => {
-      const card = $('<div class="proj-card fade-up" data-id="'+p.id+'" style="transition-delay:'+(i*70)+'ms"><div class="proj-img" style="background-image:url('+p.img+')"></div><div class="proj-overlay"><span class="proj-tag">'+p.tag+'</span><h3>'+p.title+'</h3><p><span>'+p.area+'</span><span class="dot"> • </span><span>'+p.loc+'</span></p></div></div>');
+      const card = $('<div class="proj-card fade-up" data-id="'+p.id+'" style="transition-delay:'+(i*70)+'ms"><div class="proj-img" style="background-image:url('+p.imgs[0]+')"></div><div class="proj-overlay"><span class="proj-tag">'+p.tag+'</span><h3>'+p.title+'</h3><p><span>'+p.area+'</span><span class="dot"> • </span><span>'+p.loc+'</span></p></div></div>');
       if (masonry && i === 0) card.addClass('proj-first');
       grid.append(card);
       setTimeout(() => card.addClass('visible'), i * 70 + 50);
@@ -129,12 +147,50 @@ $(document).ready(function () {
     renderProjects(filter, grid, grid === 'portfolio-grid');
   });
 
+  /* ── PROJECT CAROUSEL NAVIGATION ── */
+  let pmAutoplay = null;
+
+  function pmGoTo(idx) {
+    const wrap = $('#pm-carousel-wrap');
+    const slides = wrap.find('.pm-slide');
+    const dots = wrap.find('.pm-dot');
+    slides.removeClass('active').eq(idx).addClass('active');
+    dots.removeClass('active').eq(idx).addClass('active');
+    wrap.find('.pm-cur').text(idx + 1);
+  }
+
+  function pmNext() {
+    const slides = $('#pm-carousel-wrap .pm-slide');
+    const cur = slides.index(slides.filter('.active'));
+    pmGoTo((cur + 1) % slides.length);
+  }
+
+  function pmStartAutoplay() {
+    clearInterval(pmAutoplay);
+    pmAutoplay = setInterval(pmNext, 3500);
+  }
+
+  $(document).on('click', '.pm-next', function() { pmNext(); pmStartAutoplay(); });
+  $(document).on('click', '.pm-prev', function() {
+    const slides = $('#pm-carousel-wrap .pm-slide');
+    const cur = slides.index(slides.filter('.active'));
+    pmGoTo((cur - 1 + slides.length) % slides.length);
+    pmStartAutoplay();
+  });
+  $(document).on('click', '.pm-dot', function() {
+    pmGoTo(parseInt($(this).data('idx')));
+    pmStartAutoplay();
+  });
+
   /* ── CLOSE PROJECT MODAL ── */
   $('#pm-close, #projectModal .pm-backdrop').on('click', function() {
     $('#projectModal').fadeOut(180);
     $('body').css('overflow','');
+    clearInterval(pmAutoplay);
   });
-  $(document).on('keydown', function(e) { if (e.key === 'Escape') { $('#projectModal').fadeOut(180); $('body').css('overflow',''); } });
+  $(document).on('keydown', function(e) {
+    if (e.key === 'Escape') { $('#projectModal').fadeOut(180); $('body').css('overflow',''); clearInterval(pmAutoplay); }
+  });
 
   /* ── NAVBAR SCROLL ── */
   $(window).on('scroll', function() { $('.navbar').toggleClass('scrolled', $(this).scrollTop() > 60); });

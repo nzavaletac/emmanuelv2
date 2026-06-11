@@ -61,8 +61,8 @@
         <li class="breadcrumb-item active" style="color:#fff">Proyectos</li>
       </ol>
     </nav>
-    <p class="section-eyebrow" style="color:var(--brand)">Portafolio</p>
-    <h1 style="color:#fff">Todos Nuestros Proyectos</h1>
+    <p class="section-eyebrow">Portafolio</p>
+    <h1>Todos Nuestros Proyectos</h1>
     <p style="color:rgba(255,255,255,.72);max-width:520px">Conoce el alcance y calidad de nuestras obras ejecutadas en Lima y el resto del Perú.</p>
   </div>
 </div>
@@ -91,7 +91,7 @@
       <button id="pm-close">&#x2715;</button>
     </div>
     <div class="pm-body">
-      <div class="pm-img-col"><div id="pm-img"></div></div>
+      <div class="pm-img-col"><div id="pm-carousel-wrap"></div></div>
       <div class="pm-info-col">
         <p class="pm-desc" id="pm-desc"></p>
         <div class="pm-grid">
@@ -114,32 +114,8 @@
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/app.js"></script>
 <script>
-  // En proyectos.html usar el grid completo sin masonry
   $(document).ready(function(){
-    renderProjects('all','all-projects-grid', false);
-
-    // Filtros apuntan al grid correcto
-    $('.filter-btn').off('click').on('click', function(){
-      $('.filter-btn').removeClass('active');
-      $(this).addClass('active');
-      renderProjects($(this).data('filter'),'all-projects-grid', false);
-    });
-
-    // Modal
-    $('#projectModal').css('display','none');
-    $('#pm-close, #projectModal .pm-backdrop').on('click', function(){
-      $('#projectModal').fadeOut(180); $('body').css('overflow','');
-    });
-    window.openProjectModal = function(id){
-      var p = window.projects.find(function(x){return x.id===id;});
-      if(!p) return;
-      $('#pm-tag').text(p.tag); $('#pm-area').text(p.area); $('#pm-title').text(p.title);
-      $('#pm-desc').text(p.desc); $('#pm-img').css('background-image','url('+p.img+')');
-      $('#pm-client').text(p.client); $('#pm-loc').text(p.loc); $('#pm-year').text(p.year);
-      $('#pm-areav').text(p.area); $('#pm-duration').text(p.duration);
-      $('#projectModal').css('display','flex'); $('body').css('overflow','hidden');
-    };
-    $(window).on('scroll',function(){ $('.navbar').toggleClass('scrolled',$(this).scrollTop()>60); });
+    renderProjects('all', 'all-projects-grid', false);
   });
 </script>
 </body>
