@@ -7,6 +7,49 @@
       name="description"
       content="Constructora Emmanuel – Especialistas en obras civiles, demoliciones, excavaciones y acabados arquitectónicos en Lima, Perú."
     />
+    <link rel="canonical" href="https://constructoraemmanuel.pe/" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_PE" />
+    <meta
+      property="og:title"
+      content="Constructora Emmanuel | Obras Civiles – Lima, Perú"
+    />
+    <meta
+      property="og:description"
+      content="Constructora Emmanuel – Especialistas en obras civiles, demoliciones, excavaciones y acabados arquitectónicos en Lima, Perú."
+    />
+    <meta
+      property="og:image"
+      content="https://constructoraemmanuel.pe/img/logo.png"
+    />
+    <meta property="og:url" content="https://constructoraemmanuel.pe/" />
+    <meta property="og:site_name" content="Constructora Emmanuel" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Constructora Emmanuel | Obras Civiles – Lima, Perú"
+    />
+    <meta
+      name="twitter:description"
+      content="Constructora Emmanuel – Especialistas en obras civiles, demoliciones, excavaciones y acabados arquitectónicos en Lima, Perú."
+    />
+    <meta
+      name="twitter:image"
+      content="https://constructoraemmanuel.pe/img/logo.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
@@ -17,6 +60,25 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Constructora Emmanuel | Obras Civiles – Lima, Perú</title>
     <link rel="icon" href="./img/icon.ico" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "GeneralContractor",
+        "name": "Constructora Emmanuel Servicios Generales S.A.C.",
+        "image": "https://constructoraemmanuel.pe/img/logo.png",
+        "url": "https://constructoraemmanuel.pe/",
+        "telephone": "+51919441396",
+        "email": "info@constructoraemmanuel.pe",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lima",
+          "addressCountry": "PE"
+        },
+        "areaServed": "Lima, Perú"
+      }
+    </script>
   </head>
   <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
     <!-- TOP NAV -->
@@ -32,10 +94,18 @@
             >
           </div>
           <div class="col-auto social-icons">
-            <a href="#"><i class="bx bxl-facebook"></i></a>
-            <a href="#"><i class="bx bxl-instagram"></i></a>
-            <a href="#"><i class="bx bxl-whatsapp"></i></a>
-            <a href="#"><i class="bx bxl-linkedin"></i></a>
+            <a href="#" aria-label="Facebook"
+              ><i class="bx bxl-facebook"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="bx bxl-instagram"></i
+            ></a>
+            <a href="#" aria-label="WhatsApp"
+              ><i class="bx bxl-whatsapp"></i
+            ></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="bx bxl-linkedin"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -85,7 +155,13 @@
               <a class="nav-link" href="#contact">Contacto</a>
             </li>
             <li class="nav-item ms-lg-2">
-              <a class="btn btn-brand">Contáctanos</a>
+              <a
+                href="#"
+                class="btn btn-brand"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >Contáctanos</a
+              >
             </li>
           </ul>
         </div>
@@ -707,10 +783,18 @@
               <div
                 class="social-icons mt-3 d-flex justify-content-center gap-2"
               >
-                <a href="#"><i class="bx bxl-facebook"></i></a>
-                <a href="#"><i class="bx bxl-instagram"></i></a>
-                <a href="#"><i class="bx bxl-whatsapp"></i></a>
-                <a href="#"><i class="bx bxl-linkedin"></i></a>
+                <a href="#" aria-label="Facebook"
+                  ><i class="bx bxl-facebook"></i
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><i class="bx bxl-instagram"></i
+                ></a>
+                <a href="#" aria-label="WhatsApp"
+                  ><i class="bx bxl-whatsapp"></i
+                ></a>
+                <a href="#" aria-label="LinkedIn"
+                  ><i class="bx bxl-linkedin"></i
+                ></a>
               </div>
               <div
                 class="footer-links mt-4 d-flex flex-wrap justify-content-center gap-3"
@@ -718,8 +802,8 @@
                 <a href="#about">Nosotros</a>
                 <a href="#services">Servicios</a>
                 <a href="proyectos.html">Proyectos</a>
-                <a href="#team">Equipo</a>
-                <a href="#reviews">Testimonios</a>
+                <a href="#contact">Contacto</a>
+                <a href="privacidad.html">Privacidad</a>
               </div>
             </div>
           </div>
@@ -728,7 +812,7 @@
       <div class="footer-bottom text-center">
         <p class="mb-0">
           Copyright © Constructora Emmanuel Servicios Generales S.A.C. – Todos
-          los derechos reservados · 2026
+          los derechos reservados · <span id="current-year"></span>
         </p>
       </div>
     </footer>
@@ -757,58 +841,144 @@
                       Escríbenos y nuestro equipo se pondrá en contacto contigo
                       lo antes posible.
                     </p>
-                    <div class="row g-3 mt-1">
-                      <div class="col-sm-6">
-                        <label class="form-label fw-semibold small"
-                          >Nombres</label
-                        ><input
+                    <!-- FormSubmit.co: primer envío llegará un correo de confirmación a
+                         info@constructoraemmanuel.pe, hay que aprobarlo una sola vez para activar -->
+                    <form
+                      id="contact-form"
+                      action="https://formsubmit.co/ajax/nzavaletac@gmail.com"
+                      method="POST"
+                    >
+                      <div class="row g-3 mt-1">
+                        <div class="col-sm-6">
+                          <label
+                            for="cf-nombre"
+                            class="form-label fw-semibold small"
+                            >Nombres</label
+                          >
+                          <input
+                            type="text"
+                            id="cf-nombre"
+                            name="nombre"
+                            class="form-control"
+                            placeholder="Tu nombre"
+                            required
+                          />
+                        </div>
+                        <div class="col-sm-6">
+                          <label
+                            for="cf-apellido"
+                            class="form-label fw-semibold small"
+                            >Apellidos</label
+                          >
+                          <input
+                            type="text"
+                            id="cf-apellido"
+                            name="apellido"
+                            class="form-control"
+                            placeholder="Tus apellidos"
+                            required
+                          />
+                        </div>
+                        <div class="col-12">
+                          <label
+                            for="cf-email"
+                            class="form-label fw-semibold small"
+                            >Correo</label
+                          >
+                          <input
+                            type="email"
+                            id="cf-email"
+                            name="email"
+                            class="form-control"
+                            placeholder="mail@email.com"
+                            required
+                          />
+                        </div>
+                        <div class="col-12">
+                          <label
+                            for="cf-telefono"
+                            class="form-label fw-semibold small"
+                            >Teléfono</label
+                          >
+                          <input
+                            type="tel"
+                            id="cf-telefono"
+                            name="telefono"
+                            class="form-control"
+                            placeholder="+51 999 999 999"
+                          />
+                        </div>
+                        <div class="col-12">
+                          <label
+                            for="cf-mensaje"
+                            class="form-label fw-semibold small"
+                            >Mensaje</label
+                          >
+                          <textarea
+                            id="cf-mensaje"
+                            name="mensaje"
+                            class="form-control"
+                            rows="4"
+                            placeholder="Cuéntanos sobre tu proyecto..."
+                            required
+                          ></textarea>
+                        </div>
+                        <!-- honeypot anti-spam: campo oculto que los bots suelen rellenar -->
+                        <input
                           type="text"
-                          class="form-control"
-                          placeholder="Tu nombre"
+                          name="_honey"
+                          style="display: none"
+                          tabindex="-1"
+                          autocomplete="off"
                         />
-                      </div>
-                      <div class="col-sm-6">
-                        <label class="form-label fw-semibold small"
-                          >Apellidos</label
-                        ><input
-                          type="text"
-                          class="form-control"
-                          placeholder="Tus apellidos"
+                        <input
+                          type="hidden"
+                          name="_subject"
+                          value="Nuevo mensaje de contacto - Constructora Emmanuel"
                         />
+                        <input type="hidden" name="_captcha" value="false" />
+                        <input type="hidden" name="_template" value="table" />
+                        <div class="col-12">
+                          <div class="form-check">
+                            <input
+                              type="checkbox"
+                              class="form-check-input"
+                              id="cf-privacidad"
+                              name="privacidad_aceptada"
+                              value="Sí"
+                              required
+                            />
+                            <label
+                              class="form-check-label small"
+                              for="cf-privacidad"
+                            >
+                              Acepto la
+                              <a
+                                href="privacidad.html"
+                                target="_blank"
+                                rel="noopener"
+                                >Política de Privacidad</a
+                              >
+                              y el tratamiento de mis datos personales.
+                            </label>
+                          </div>
+                        </div>
+                        <div
+                          class="col-12"
+                          id="cf-status"
+                          role="status"
+                          aria-live="polite"
+                        ></div>
+                        <div class="col-12">
+                          <button
+                            type="submit"
+                            class="btn btn-brand w-100 py-2"
+                          >
+                            Enviar mensaje
+                          </button>
+                        </div>
                       </div>
-                      <div class="col-12">
-                        <label class="form-label fw-semibold small"
-                          >Correo</label
-                        ><input
-                          type="email"
-                          class="form-control"
-                          placeholder="mail@email.com"
-                        />
-                      </div>
-                      <div class="col-12">
-                        <label class="form-label fw-semibold small"
-                          >Teléfono</label
-                        ><input
-                          type="tel"
-                          class="form-control"
-                          placeholder="+51 999 999 999"
-                        />
-                      </div>
-                      <div class="col-12">
-                        <label class="form-label fw-semibold small"
-                          >Mensaje</label
-                        ><textarea
-                          class="form-control"
-                          rows="4"
-                          placeholder="Cuéntanos sobre tu proyecto..."
-                        ></textarea>
-                      </div>
-                      <div class="col-12">
-                        <button class="btn btn-brand w-100 py-2">
-                          Enviar mensaje
-                        </button>
-                      </div>
-                    </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -842,8 +1012,12 @@
         <div class="pm-body">
           <div class="pm-img-col"><div id="pm-carousel-wrap"></div></div>
           <div class="pm-info-col">
-            <div id="pm-client-logo-wrap" class="pm-client-section" style="display:none">
-              <img id="pm-client-logo" src="" alt="">
+            <div
+              id="pm-client-logo-wrap"
+              class="pm-client-section"
+              style="display: none"
+            >
+              <img id="pm-client-logo" src="" alt="" />
               <div>
                 <span class="pm-client-label">Ejecutado para</span>
                 <span class="pm-client-name" id="pm-client-modal-name"></span>
@@ -871,7 +1045,11 @@
     </div>
 
     <!-- WhatsApp -->
-    <a href="https://wa.me/51919441396" target="_blank" class="whatsapp-float"
+    <a
+      href="https://wa.me/51919441396"
+      target="_blank"
+      class="whatsapp-float"
+      aria-label="Escríbenos por WhatsApp"
       ><i class="bx bxl-whatsapp"></i
     ></a>
 

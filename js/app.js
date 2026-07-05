@@ -1,5 +1,49 @@
 $(document).ready(function () {
 
+  /* ── FOOTER YEAR ── */
+  const yearEl = document.getElementById('current-year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ── CONTACT FORM (Formspree) ── */
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    const statusEl = document.getElementById('cf-status');
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const submitLabel = submitBtn.textContent;
+
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+      statusEl.textContent = '';
+      statusEl.className = '';
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { Accept: 'application/json' },
+      })
+        .then(async (response) => {
+          const data = await response.json().catch(() => ({}));
+          if (response.ok && data.success !== 'false') {
+            statusEl.textContent = '¡Gracias! Tu mensaje fue enviado, te contactaremos pronto.';
+            statusEl.className = 'text-success small fw-semibold';
+            contactForm.reset();
+          } else {
+            throw new Error(data.message || 'Ocurrió un error al enviar tu mensaje.');
+          }
+        })
+        .catch((err) => {
+          statusEl.textContent = err.message || 'Ocurrió un error. Intenta de nuevo o escríbenos por WhatsApp.';
+          statusEl.className = 'text-danger small fw-semibold';
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+          submitBtn.textContent = submitLabel;
+        });
+    });
+  }
+
   /* ── HERO SLIDER ── */
   $(".hero-slider").owlCarousel({
     loop: true, nav: true, dots: true,

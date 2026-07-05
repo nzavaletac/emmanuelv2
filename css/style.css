@@ -18,11 +18,13 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap");
 */
 
-/* COMBO 7 – Montserrat (títulos) + Source Sans 3 (cuerpo) */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap");
+/* COMBO 7 – Montserrat (títulos) + Source Sans 3 (cuerpo)
+   Cargada vía <link rel="preconnect"> + <link rel="stylesheet"> en el <head>
+   de index.html / proyectos.html (más rápido que @import, que bloquea en serie). */
 
 :root {
   --brand: #f67600;
+  --brand2: #ffb26b;
   --dark: #111111;       /* antes: #494441 */
   --body: #516171;
   --black: #111111;
@@ -88,86 +90,6 @@ section {
 
 .text-brand {
   color: var(--brand) !important;
-}
-
-.hero-slider .owl-prev,
-.hero-slider .owl-next {
-  background-color: rgba(255, 255, 255, 0.3) !important;
-  width: 60px !important;
-  height: 60px !important;
-  display: block;
-  display: grid;
-  place-items: center;
-  color: #fff !important;
-  border-radius: 100px;
-  line-height: 0;
-  border-radius: 100px !important;
-  position: absolute;
-  top: 50%;
-  font-weight: 600 !important;
-  font-size: 12px !important;
-  transition: all 0.4s ease;
-  margin-top: -30px !important;
-}
-
-.owl-prev {
-  left: 0;
-}
-.owl-next {
-  right: 0;
-}
-
-.hero-slider .owl-prev:hover,
-.hero-slider .owl-next:hover {
-  background-color: var(--brand) !important;
-}
-
-.owl-dot.active span {
-  background-color: var(--brand) !important;
-}
-
-/* slide */
-.slide {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.slide1 {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(../img/banner2.webp);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.slide2 {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(../img/banner4.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.slide3 {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(../img/banner3.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.slide4 {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(../img/banner1.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.slide .display-3 {
-  text-transform: uppercase;
-  color: #fff;
 }
 
 /* navbar */
@@ -601,12 +523,6 @@ input.form-control {
 .hero-arrow:hover { background:var(--brand); border-color:var(--brand); }
 .hero-prev { left:1.5rem; } .hero-next { right:1.5rem; }
 @media (max-width:767px) { .hero-video-wrap { min-height:80vh; } .hero-title { font-size:1.8rem; } .hero-arrow { display:none; } }
-
-/* ══════════════════════════════════════
-   SECTION TITLE STYLE (before/after lines)
-══════════════════════════════════════ */
-.section-eyebrow { display:inline-flex; align-items:center; gap:.75rem; font-size:.72rem; font-weight:700; letter-spacing:.15em; text-transform:uppercase; color:var(--brand); margin-bottom:.6rem; }
-.section-eyebrow::before, .section-eyebrow::after { content:''; display:block; width:36px; height:2px; background:var(--brand); border-radius:2px; }
 
 /* ══════════════════════════════════════
    SCROLL ANIMATIONS
